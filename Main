@@ -1,0 +1,24 @@
+from tkinter import*
+class mains:
+	def __init__(self):
+		self.root=Tk()
+		self.root.geometry('300x300')
+		self.makeshit()
+		self.root.mainloop()
+	def callback(self):
+		self.root.destroy()
+
+	def svfl(self):
+		pass
+	def makeshit(self):
+		quitButton= Button(self.root,text='quit',command=self.callback)
+		label01= Label(self.root,text='insert text')
+		entry01= Entry(self.root)
+		savebutton= Button(self.root,text= 'save',command=self.svfl())
+		label01.grid(row=0,column=0)
+		quitButton.grid(row=1,column=0)
+		entry01.grid(row=2,column=0)
+		self.x=entry01.get()
+		savebutton.grid(row=3, column=0)
+
+mains()
